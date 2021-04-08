@@ -10,6 +10,12 @@
 export default {
   name: "App",
   components: {},
+  watch: {
+    $route(to, from) {
+      // 监听路由变化
+      console.log("路由变化", to, from);
+    },
+  },
   methods: {
     tiao() {
       this.$router.push("/login");

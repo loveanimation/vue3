@@ -11,6 +11,14 @@ export default {
     console.log("组件内", to, from);
     next();
   },
+  beforeRouteUpdate(to, from, next) {
+    console.log("组件内更新", to, from);
+    next();
+  },
+  beforeRouteLeave(to, from, next) {
+    console.log("组件内离开", to, from);
+    next();
+  },
   methods: {
     back() {
       this.$router.back();
